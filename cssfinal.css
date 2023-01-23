@@ -207,8 +207,8 @@ wrap{
 
 .dot{
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border: 3px solid #fff;
     border-radius: 50%;
     margin: 0 10px;
@@ -224,9 +224,10 @@ wrap{
 
 .fade{
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 3s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
+    transition-delay: 6s;
 }
 
 @-webkit-keyframeskeyframes fade {
@@ -246,9 +247,9 @@ wrap{
     top: 30%;
     left: 15%;
     -webkit-animation-name: posi;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 4s;
     animation-name: posi ;
-    animation-duration: 2s;
+    animation-duration: 4s;
     z-index: 1;
     
 }
@@ -274,17 +275,20 @@ wrap{
     color: yellow;
     font-weight: 100;
     margin: 20px;
+    margin-top: 5px;
     font-family: 'Baloo Da 2', serif;
     font-size: 5rem;
-    line-height: 8.5rem;
+    line-height: 9rem;
     letter-spacing: .2rem;
     width: 50%;
 
 }
 .txt p{
     font-weight: 100;
-    font-size: 10px;
+    font-size: 15px;
     margin: 20px;
+    font-weight: bold;
+  
 
     
 }
@@ -540,10 +544,11 @@ img {
 /*abtus*/
 
 .abtus {
-    margin: 80px;
+    margin-top: 75px;
     scroll-behavior: smooth;
     font-family:Georgia, 'Times New Roman', Times, serif;
     height: 100%;
+    background: url(./img/iconference.jpg);
     
 }
 .contabt{
@@ -764,7 +769,7 @@ img {
 @media screen and (max-width: 768px) { 
     .abtus {
         display:block;
-        width: 105%;
+        width: 100%;
         overflow: hidden;
 
         margin: 0;
@@ -829,12 +834,14 @@ img {
         
     }
     .contabt section {
-        width: 120%;
+        width: 100%;
         height: 100%;
         font-size: 90%;
         left: -10px;
-        font-size: 90%;
+        font-size: 80%;
         margin-top: 90px;
+        overflow: hidden;
+
         
         
     }
@@ -899,12 +906,15 @@ img {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #007bff !important;
+
     margin-top: 65px;
     padding-top: 0.02px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
     scroll-behavior: smooth;
+    background-image: url('./img/electbackg.jpg') ;
+    height: 100%;
    
 }
 
@@ -1076,7 +1086,7 @@ img {
 }
 
 .upsinverterappcont {
-    scroll-margin-top: 90px;
+    scroll-margin-top: 150px;
     position: relative;
     width: 300px;
     height: 350px;
@@ -1153,13 +1163,19 @@ img {
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 10px;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1em;
 
 }
 .contentups p {
     color: #fff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contentups ul {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+
 }
 
 .contentups a {
@@ -1183,13 +1199,14 @@ img {
 }
  .installation_img {
     position: absolute;
-    top: 30%;
+    top: 10%;
     left: 60%;
     transform: translate(-50% -50% );
     transform:  scale(0);
-    height: 300px;
+    height: 250px;
     transition: .5s;
     transition-delay: .7s;
+    width: 300px;
 
 }
 
@@ -1198,16 +1215,302 @@ img {
     transform: scale(1);
     transition-delay: 0.5s;
     top: 10%;
-    left: 65%;
+    left: 50%;
+    z-index: 1;
+    font-size: 70%;
 
 
 }
 
 
+/* responsive for circle*/
+
+@media (max-width: 991px) {
+    .upsinverterappcont {
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+    }
+    .upsinverterappcont:hover {
+        height: 500px;
+    }
+
+    .upsinverterappcont:hover  .installation_img {
+        top: initial;
+        bottom: 30px;
+        left: 10%;
+        transform: translate(-50%, 0);
+        transform: scale(1);
+        height: 200px;
+
+    }
+
+    .upsinverterappcont .contentups{
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}
+
+
+/* end responsive for circle*/
+
 
 
 
 /* end of service */
+
+
+/* begining of client */
+
+.clientbody {      /* begining of glowing text */
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  
+   
+    
+    
+    
+
+}
+
+.clientcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #000;
+    margin-top: 0;
+    width: auto;
+    scroll-margin-top: 420px ;
+
+}
+.clientcont2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-padding-top: 420px ;
+    background: #000;
+    margin-top: 0;
+    width: auto;
+}
+
+
+.clientcontent  {
+    display: grid;
+    padding-inline-start: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: 400px auto;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+
+}
+
+.clientbox  {
+    position:relative;
+    
+    height: 300px;
+    display: flex;
+    padding-left: 10px;
+    
+    
+
+}
+
+.clientbox h2 {
+    color: #fff;
+    font-family:monospace ;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 12.5px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 30px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff,
+                 0 0 120px #00b3ff;
+
+
+}
+
+.lightbar {
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 50px;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 30px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff,
+                 0 0 120px #00b3ff;
+    animation: animatelightbar 5s linear infinite; 
+
+}
+
+@keyframes animatelightbar {
+    0%, 5%  {
+        transform: scaleY(0) translateX(0);
+    }
+    10%  {
+        transform: scaleY(1) translateX(0);
+    }
+    90%  {
+        transform: scaleY(1)  translateX(calc(400px -
+        5px ));
+    }
+
+    95%, 100%  {
+        transform: scaleY(0)  translateX(calc(400px -
+        5px ));
+    }
+
+}
+
+.toplayerlightbar {
+    position: absolute;
+    left: 0;
+    width: 400px;
+    height: 50px;
+    background: #000;
+    animation: animatetoplayerlightbar 10s linear infinite;
+
+}
+
+@keyframes animatetoplayerlightbar {
+
+    0%, 2.5%  {
+        transform: translateX(0);
+    }
+    5%  {
+        transform: translateX(0);
+    }
+    45%  {
+        transform: translateX(100%);
+    }
+
+    47.5%, 50%  {
+        transform: translateX(100%);
+    }
+
+    50.001%, 52.5%  {
+        transform: translateX(-100%);
+    }
+    55%  {
+        transform: translateX(-100%);
+    }
+    95%  {
+        transform: translateX(0);
+    }
+
+    97.5%, 100%  {
+        transform: translateX(0);
+    }
+
+} /* end of glowing text */
+
+.clientlogoslider {   /* begining of logoslider fpr client */
+
+    z-index: 1;
+    height: 100px;
+    overflow:hidden;
+    border-radius: 10px;
+    width: auto;
+    margin: auto;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    border-style: dashed;
+    position: relative;
+    background: #00b3ff;
+
+}
+
+ .logoslidetrack {
+    
+    display: flex;
+    
+    width: calc(150px * 4);
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;   
+    
+}
+
+ .logoslide {
+    height: 100px;
+    width: 250px;   
+    padding-inline: 20px;
+    
+}
+
+
+
+.logoslide img {
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    animation: scroll 10s linear infinite; 
+
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(calc(-150px * 2));
+    }
+}
+
+
+/*@media (max-width: 420px)  {
+  
+    .clitextbox {
+        width: auto;
+        
+
+    }
+    .clitextbox h2 {
+        font-size: 10px;
+        font-weight: 200px;
+        letter-spacing: 1.5px
+
+    }
+    .lightbar {
+        width: 2.5px;
+        height: 25px;
+    }
+
+    
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .clientbody  {
+        font-size: 80%;
+       
+    }
+
+   
+       
+    
+
+
+}*/
+
+
+/* end of client */
+
 
 
 
@@ -1287,7 +1590,7 @@ img {
 }
 
 /*responsive*/
-@media(max-width: 767px){
+@media(max-width: 767px){ 
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
@@ -1331,19 +1634,19 @@ img {
     padding-right: 20px;
    
    
-}
+ }
 
-.hamburger.active .line:nth-child(2){
+ .hamburger.active .line:nth-child(2){
     opacity: 0;
-}
-.hamburger.active .line:nth-child(1){
+ }
+ .hamburger.active .line:nth-child(1){
     transform: translateY(8px) rotate(45deg);
-}
+ }
 
-.hamburger.active .line:nth-child(3){
+ .hamburger.active .line:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
-}
-.nav-menu{
+ } 
+ .nav-menu{
     position: fixed;
     left: -100%;
     top: 65px;
@@ -1356,29 +1659,75 @@ img {
     z-index: 400;
     
    
-}
-.menu-head .nav-menu li {
+  }
+ .menu-head .nav-menu li {
     margin: 10px 0;
     padding-left: 5px;
     
-}
+ }
 
 
-.nav-menu.active {
+ .nav-menu.active {
     left: 0;
     
-}
-}
+   }
+
+   .clientbody  {
+    font-size: 90%;
+    height: 100%;
+    background-color: #000;
+    margin-top: -30px;
+    margin-bottom: -40px;
+    padding: 20px;
+ }
+ .clientcont {
+    font-size: 70%;
+    margin-top: -70px;
+ }
+ 
+ 
+ .clientcont2 {
+    font-size: 70%;
+    margin-top: -140px;
+    padding-bottom: 100px;
+ }
+ .clientcontent {
+    display: block;
+    block-size: auto;
+ }
+
+ .clientbox  {
+    justify-content: center;
+    align-items: center;
+ }
+ .clientbox h2  {
+   
+ font-size: 20px;
+ font-weight: 250;
+ letter-spacing: 0.7px;
+
+ }
+ .clientlogoslider {
+    margin-top: -80px;
+ 
+ }
+ 
+} 
+
+
+
+ 
 @media(max-width: 574px){
   .footer-col{
     width: 100%;
-}
+ }
 
-.myslider{
-    height: 500px;
+ .myslider{
+    height: 700px;
+    margin-top: 65px;
     
-}
-.txt{
+ }
+ .txt{
     line-height: 15px;
     top: 50%;
     left: 50%;
@@ -1387,15 +1736,56 @@ img {
     animation-duration: 2s;
     font-size: 30%;
 
-}
-@-webkit-keyframes posi2 {
+ }
+  @-webkit-keyframes posi2 {
     from {top: 35%;}
     to {top: 50%}
-}
-@keyframes posi2 {
+ }
+ @keyframes posi2 {
     from {top: 35%;}
-    to {top: 50%}
-}
+     to {top: 50%}
+ }
+
+  .clientbody  {
+    font-size: 90%;
+    height: 100%;
+    background-color: #000;
+    margin-top: -30px;
+    margin-bottom: -40px;
+ }
+ .clientcont {
+    font-size: 70%;
+    margin-top: -70px;
+ }
+ 
+ 
+ .clientcont2 {
+    font-size: 70%;
+    margin-top: -140px;
+    padding-bottom: 100px;
+ }
+ .clientcontent {
+    display: block;
+    block-size: auto;
+ }
+
+ .clientbox  {
+    justify-content: center;
+    align-items: center;
+ }
+ .clientbox h2  {
+   
+ font-size: 15px;
+ font-weight: 250;
+ letter-spacing: 0.7px;
+
+ }
+ .clientlogoslider {
+    margin-top: -80px;
+ 
+ }
+ 
+
 
 
 }
@@ -1521,8 +1911,17 @@ img {
     .txt h1{
 		font-size: 30px;
 		margin-bottom: 20px;
-		line-height: 35px;
+		line-height: 45px;
+        text-align: left;
+       
+        
 	}
+
+    .txt ol {
+        text-align: left;
+        align-items: center;
+        font-size: 10px;
+    }
 	
 	
 	
@@ -1539,13 +1938,54 @@ img {
 		font-size: 50%;
 
 	}
+    .myslider{
+        height: 600px;
+        
+    }
+
+      .clientbody  {
+        font-size: 80%;
+        height: 100%;
+        background-color: #000;
+        margin-top: -50px;
+        margin-bottom: -40px;
+    }
+    .clientcont {
+        font-size: 60%;
+        margin-top: -70px;
+    }
+    .clientcont2 {
+        font-size: 60%;
+        margin-top: -140px;
+        padding-bottom: 100px;
+    }
+    .clientcontent {
+        display: block;
+        block-size: auto;
+    }
+
+    .clientbox  {
+        justify-content: center;
+        align-items: center;
+    }
+    .clientbox h2  {
+       
+    font-size: 10px;
+    font-weight: 200;
+    letter-spacing: 0.9px;
+
+    }
+    .clientlogoslider {
+        margin-top: -80px;
+
+    }
+   
+
     
     
 }
 
-@media screen and (min-width: 520px) {
 
-}
 
 
 
